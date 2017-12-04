@@ -17,6 +17,6 @@ renderDockerfile
 
 cd $VERSION
 
-docker build -t "cassandra:$VERSION" .
+docker build -t "gini/cassandra:$VERSION" .
 
 cd -
