@@ -10,5 +10,12 @@ env:
 script: 
   - ./scripts/build.sh
 
-deploy: 
-  - ./scripts/push.sh
+deploy:
+  - provider: script
+    script: ./script/push.sh
+    on:
+      branch: master
+
+branches:
+  only:
+    - master 
