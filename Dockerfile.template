@@ -9,4 +9,3 @@ VOLUME /var/lib/cassandra
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["cassandra", "-f"]
-
