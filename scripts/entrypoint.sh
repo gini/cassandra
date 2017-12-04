@@ -69,6 +69,15 @@ if [ "$1" = 'cassandra' ]; then
 		authorizer \
 		role_manager \
                 commitlog_total_space_in_mb \
+                storage_port \
+                ssl_storage_port \
+                native_transport_port \
+                rpc_port \
+                read_request_timeout_in_ms \
+                request_timeout_in_ms \
+                range_request_timeout_in_ms \
+                write_request_timeout_in_ms \
+                counter_write_request_timeout_in_ms \
 	; do
 		var="CASSANDRA_${yaml^^}"
 		val="${!var}"
