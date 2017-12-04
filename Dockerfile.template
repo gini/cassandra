@@ -2,5 +2,11 @@ FROM cassandra:CASSANDRA_VERSION
 
 COPY entrypoint.sh /
 
+EXPOSE 7000 7001 7199 9042 9160
+
+VOLUME /var/lib/cassandra
+
 ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["cassandra", "-f"]
 
