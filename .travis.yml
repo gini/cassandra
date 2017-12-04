@@ -1,0 +1,14 @@
+language: bash
+services: docker
+
+env:
+  - VERSION=3.11
+  - VERSION=3.0
+  - VERSION=2.2
+  - VERSION=2.1
+
+script: 
+  - ./scripts/build.sh
+
+deploy: 
+  - ./scripts/push.sh

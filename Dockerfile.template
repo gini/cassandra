@@ -1,0 +1,6 @@
+FROM cassandra:CASSANDRA_VERSION
+
+COPY entrypoint.sh /
+
+ENTRYPOINT ["/entrypoint.sh"]
+
