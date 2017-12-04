@@ -36,6 +36,8 @@ if [ "$1" = 'cassandra' ]; then
   
         : ${CASSANDRA_COMMITLOG_TOTAL_SPACE_IN_MB='8196'}
 
+	: ${CASSANDRA_RPC_ADDRESS='0.0.0.0'}
+
 	: ${CASSANDRA_LISTEN_ADDRESS='auto'}
 
 	if [ "$CASSANDRA_LISTEN_ADDRESS" = 'auto' ]; then
