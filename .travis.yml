@@ -12,7 +12,7 @@ script:
 
 deploy:
   - provider: script
-    script: ./script/push.sh
+    script: docker login -u $DOCKER_LOGIN -p $DOCKER_PWD && docker push cassandra:${VERSION}
     on:
       branch: master
 
