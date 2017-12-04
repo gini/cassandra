@@ -3,4 +3,4 @@ set -e
 
 docker login -u $DOCKER_LOGIN -p $DOCKER_PWD
 
-docker push cassandra:$VERSION
+docker push gini/cassandra:$VERSION
