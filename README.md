@@ -1,7 +1,7 @@
 # Cassandra
 [![Build Status](https://travis-ci.org/gini/cassandra.svg?branch=master)](https://travis-ci.org/gini/cassandra)
 
-Gini's fork of the official Cassandra image. :shipit: *Builds weekly to keep up to date with the official, source one.* :shipit:
+Gini's fork of the official Cassandra image. :shipit: **Builds weekly to keep up to date with the official, source one.** :shipit:
 
 This image simply increases the amount exposed configuration options through environment variables. These are:
 
