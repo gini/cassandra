@@ -16,6 +16,10 @@ if [ "$1" = 'cassandra' ]; then
 
         # Define some sane defaults
 
+        : ${CASSANDRA_BATCH_SIZE_WARN_THRESHOLD_IN_KB='5'}
+
+        : ${CASSANDRA_BATCH_SIZE_FAIL_THRESHOLD_IN_KB='50'}
+
 	: ${CASSANDRA_RANGE_REQUEST_TIMEOUT_IN_MS='10000'}
 
 	: ${CASSANDRA_WRITE_REQUEST_TIMEOUT_IN_MS='2000'}
@@ -80,6 +84,8 @@ if [ "$1" = 'cassandra' ]; then
                 range_request_timeout_in_ms \
                 write_request_timeout_in_ms \
                 counter_write_request_timeout_in_ms \
+		batch_size_warn_threshold_in_kb \
+		batch_size_fail_threshold_in_kb \
 	; do
 		var="CASSANDRA_${yaml^^}"
 		val="${!var}"
