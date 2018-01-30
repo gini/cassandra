@@ -9,6 +9,3 @@ fi
 docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
 docker push gini/cassandra:$VERSION
-
-docker tag gini/cassandra:$VERSION gini/cassandra:latest
-docker push gini/cassandra:latest
