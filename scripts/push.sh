@@ -1,8 +1,14 @@
 #!/bin/bash
 set -e
 
-docker images 
+if [ -z $DOCKER_USER -o -z $DOCKER_PASSWORD ] ; then
+  echo "Missing env variables for pushing to the docker hub"
+  exit 2
+fi  
 
-docker login -u $DOCKER_LOGIN -p $DOCKER_PWD
+docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
 docker push gini/cassandra:$VERSION
+
+docker tag gini/cassandra:$VERSION gini/cassandra:latest
+docker push gini/cassandra:latest
